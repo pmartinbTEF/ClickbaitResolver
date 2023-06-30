@@ -1,6 +1,8 @@
 name: "UnitTest"
 
-on: [ push ]
+on:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   run-shell-command:
@@ -8,5 +10,7 @@ jobs:
     steps:
       - name: Run a one-line script
         run: echo "Hello, world!"
-      - name: Unit tests
-        run: ./gradlew testDebug
+      - name: Execute unit tests
+        with:
+          args: 'bash ./gradlew testDebug'
+
