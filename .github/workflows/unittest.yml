@@ -3,6 +3,7 @@ name: "UnitTest"
 on:
   pull_request:
   workflow_dispatch:
+  push:
 
 jobs:
   run-shell-command:
@@ -13,4 +14,5 @@ jobs:
       - name: Execute unit tests
         with:
           args: 'bash ./gradlew testDebug'
+        run: ./gradlew testDebug"
 
