@@ -12,7 +12,5 @@ jobs:
       - name: Run a one-line script
         run: echo "Hello, world!"
       - name: Execute unit tests
-        with:
-          args: 'bash ./gradlew testDebug'
         run: ./gradlew testDebug"
 
