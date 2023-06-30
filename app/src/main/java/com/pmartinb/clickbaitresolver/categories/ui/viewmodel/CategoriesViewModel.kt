@@ -14,8 +14,5 @@ class CategoriesViewModel @Inject constructor(
     val categories: StateFlow<List<String>>
         get() = _categories
 
-    fun getCategories() {
-        //TODO get from datastore
-        val _categories = flow<String> { "stored" }
-    }
+
 }
