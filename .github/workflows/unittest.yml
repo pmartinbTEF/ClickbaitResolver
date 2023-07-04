@@ -3,7 +3,6 @@ name: "UnitTest"
 on:
   pull_request:
   workflow_dispatch:
-  push:
 
 jobs:
   run-shell-command:
@@ -11,8 +10,16 @@ jobs:
     steps:
       - name: Run a one-line script
         run: echo "Hello, world!"
-      - name: Execute unit tests
+      - uses: actions/checkout@v3
+      - run: echo "Setting up JDK"
+      - name: set up JDK 11
+        uses: actions/setup-java@v3
         with:
-          args: 'bash ./gradlew testDebug'
-        run: ./gradlew testDebug"
+          java-version: '11'
+          distribution: 'temurin'
+          cache: gradle
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Execute unit tests
+        run: ./gradlew testDebug
 
