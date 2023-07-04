@@ -25,6 +25,6 @@ class CategoriesViewModelTest {
         )
     }
     private companion object {
-        val INITIAL_CATEGORIES = listOf<String>("Apple", "Space")
+        val INITIAL_CATEGORIES = listOf<String>("Apples", "Space")
     }
 }
