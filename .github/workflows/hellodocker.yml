@@ -1,7 +1,4 @@
 name: "HelloDocker"
-
-author: "HelloDocker"
-description: "HelloDocker"
 on:
   workflow_call:
     inputs:
