@@ -1,0 +1,21 @@
+name: "UnitTest"
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  hello-docker-workflow-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./github/actions/hello-docker
+        id: hellou
+        with:
+          who-to-greet: "Mona the Octocat"
+      - run: |
+          echo "The time was ${{ steps.hellou.outputs.time }}"
+          echo $HELLO
+
+      
+
