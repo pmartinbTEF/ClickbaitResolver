@@ -6,13 +6,10 @@ on:
 
 jobs:
   hello-docker-workflow-job:
-    uses: ./.github/workflows/hellodocker.yml
-    id: hellou
+    uses: ./.github/workflows/hellodocker.yml@main
     with:
         who-to-greet: "Mona the Octocat"
-    run: |
-        echo "The time was ${{ steps.hellou.outputs.time }}"
-        echo $HELLO
+
 
       
 
