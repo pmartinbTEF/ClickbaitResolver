@@ -17,3 +17,10 @@ on:
         image: "Dockerfile"
         args:
             - ${{ inputs.who-to-greet }}
+jobs:
+  reusable-hellodocker-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "The time was ${{ outputs.time }}"
+          echo $HELLO
