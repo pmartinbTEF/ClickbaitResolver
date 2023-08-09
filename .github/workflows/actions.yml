@@ -8,7 +8,6 @@ jobs:
   hello-docker-workflow-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - uses: ./github/actions/hello-docker
         id: hellou
         with:
