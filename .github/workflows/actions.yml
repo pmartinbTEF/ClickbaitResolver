@@ -8,7 +8,7 @@ jobs:
   hello-docker-workflow-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/workflows/hellodocker.yml
+      - uses: ./.github/workflows/hellodocker.yml@main
         id: hellou
         with:
           who-to-greet: "Mona the Octocat"
