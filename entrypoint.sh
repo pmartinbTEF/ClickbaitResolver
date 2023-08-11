@@ -3,7 +3,7 @@ echo "::debug ::Debug message"
 
 echo "Hello $1"
 time=$(date)
-echo "::set-output name=time::$time"
+echo "time=$time" >> $GITHUB_OUTPUT
 echo "::group::Some expandable logs"
 echo "Some logs"
 echo "Some logs"

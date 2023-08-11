@@ -1,10 +1,11 @@
 name: "HelloDocker"
+description: 'Greet someone and record the time'
 id: HelloDocker
 inputs:
   who-to-greet: # id of input
     description: 'Who to greet'
     required: true
-    default: 'Person'
+    default: 'World'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
