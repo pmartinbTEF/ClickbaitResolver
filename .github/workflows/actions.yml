@@ -6,6 +6,18 @@ on:
 
 jobs:
   hello-docker-workflow-job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Hello world action step
+        uses: ./ # Uses an action in the root directory
+        id: HelloDocker
+        with:
+          who-to-greet: 'Mona the Octocat'
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
     uses: ./.github/workflows/hellodocker.yml
     with:
         who-to-greet: "Mona the Octocat"
