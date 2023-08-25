@@ -1,0 +1,15 @@
+name: "HelloDocker3"
+description: 'Another docker action in folder'
+inputs:
+  other-input: # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World3'
+outputs:
+  otheroutput: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.other-input }}

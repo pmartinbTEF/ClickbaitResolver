@@ -1,6 +1,5 @@
-name: "HelloDocker"
-description: 'Greet someone and record the time'
-id: HelloDocker
+name: "HelloDocker2"
+description: 'Hello world in Docker'
 inputs:
   who-to-greet: # id of input
     description: 'Who to greet'
