@@ -1,0 +1,15 @@
+name: "name4"
+description: 'Description4'
+inputs:
+  input4: # id of input
+    description: 'input description4'
+    required: true
+    default: 'default4'
+outputs:
+  output4: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.input4 }}

@@ -31,6 +31,19 @@ jobs:
           other-input: "Peter the Octocat3"
       - name: Get the output time
         run: echo "The time was ${{ steps.hello3.outputs.otheroutput }}"
+  job4:
+    runs-on: ubuntu-latest
+    name: JobName3
+    steps:
+      - name: Checkout4
+        uses: actions/checkout@v3
+      - name: Hello world action step4
+        uses: ./action4
+        id: stepId4
+        with:
+          input4: "Jenny the Octocat4"
+      - name: Get the output time
+        run: echo "The time was ${{ steps.stepId4.outputs.output4 }}"
 
 
 
